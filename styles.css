@@ -74,13 +74,6 @@ a:hover {
     max-width: 12ch;
 }
 
-.intro {
-    color: var(--night-muted);
-    font-size: 1.1rem;
-    margin: 1rem 0 0;
-    max-width: 38rem;
-}
-
 .contact-links {
     align-items: center;
     display: flex;
