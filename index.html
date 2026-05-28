@@ -9,11 +9,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Omar Brikaa's personal website.">
+    <meta name="description" content="{{ site.description | escape }}">
     <meta name="theme-color" content="#111827">
+    <link rel="canonical" href="{{ '/' | absolute_url }}">
     <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
     <link rel="shortcut icon" type="image/jpg" href="{{ '/resources/me.jpg' | relative_url }}" />
-    <title>Omar Brikaa</title>
+    <title>{{ site.title }}</title>
 </head>
 
 <body class="home">

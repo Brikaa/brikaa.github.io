@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ page.description | default: site.description | escape }}">
     <meta name="theme-color" content="#111827">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
     <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
     <link rel="shortcut icon" type="image/jpg" href="{{ '/resources/me.jpg' | relative_url }}" />
-    <title>{{ page.title }} | Omar Brikaa</title>
+    <title>{{ page.title }} | {{ site.title }}</title>
 </head>
 
 <body class="article-page">
     <main class="article-shell">
-        <a class="back-link" href="{{ '/' | relative_url }}">Omar Brikaa</a>
+        <a class="back-link" href="{{ '/' | relative_url }}">{{ site.title }}</a>
 
         <article class="article-body">
             <header class="article-header">

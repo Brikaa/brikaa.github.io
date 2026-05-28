@@ -1,0 +1,6 @@
+title: Omar Brikaa
+description: Personal notes by Omar Brikaa.
+url: "https://brikaa.github.io"
+
+plugins:
+  - jekyll-sitemap

@@ -8,16 +8,19 @@ permalink: /404.html
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="shortcut icon" type="image/jpg" href="/resources/me.jpg" />
-    <script src='/js/redirect.js' defer></script>
-    <title>Omar Brikaa</title>
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+    <link rel="shortcut icon" type="image/jpg" href="{{ '/resources/me.jpg' | relative_url }}" />
+    <title>Page not found | Omar Brikaa</title>
 </head>
 
 <body>
     <div class="container">
         <p>
             Page not found.
+        </p>
+        <p>
+            <a href="{{ '/' | relative_url }}">Go home</a>
         </p>
     </div>
 </body>
