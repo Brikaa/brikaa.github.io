@@ -1,3 +1,8 @@
+---
+---
+
+{% assign articles = site.pages | where: "article", true | sort: "date" | reverse %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,34 +10,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Omar Brikaa's personal website.">
-    <meta name="theme-color" content="rgb(10, 23, 51)">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" type="image/jpg" href="resources/me.jpg" />
+    <meta name="theme-color" content="#111827">
+    <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+    <link rel="shortcut icon" type="image/jpg" href="{{ '/resources/me.jpg' | relative_url }}" />
     <title>Omar Brikaa</title>
 </head>
 
-<body>
-    <div class="container">
-        <h1>Omar Adel Brikaa</h1>
-        <p>
-            <a href="mailto:brikaaomar@gmail.com">brikaaomar@gmail.com</a><br />
-            <a>+201271018136</a>
-        </p>
-        <a href="https://github.com/Brikaa" target="_blank">
-            <img class="brand" src="resources/github.png">
-        </a>
+<body class="home">
+    <main class="page-shell">
+        <header class="profile">
+            <div class="profile-summary">
+                <p class="eyebrow">Personal Site</p>
+                <h1>Omar Adel Brikaa</h1>
+                <p class="intro">Software notes, integration ideas, and practical observations from the field.</p>
+            </div>
+
+            <nav class="contact-links" aria-label="Contact links">
+                <a href="mailto:brikaaomar@gmail.com">brikaaomar@gmail.com</a>
+                <a href="tel:+201271018136">+20 127 101 8136</a>
+                <a class="github-link" href="https://github.com/Brikaa" target="_blank" rel="noopener">
+                    <img class="brand" src="{{ '/resources/github.png' | relative_url }}" alt="GitHub">
+                </a>
+            </nav>
+        </header>
 
         <section class="articles" aria-labelledby="oracle-articles-title">
-            <h2 id="oracle-articles-title">Personal articles</h2>
-            <ul>
-                <li>
-                    <a href="visual-builder-oic-fixed-credentials.html">
-                        Using fixed credentials from Oracle VB to OIC? Think again
-                    </a>
-                </li>
-            </ul>
+            <div class="section-heading">
+                <p class="eyebrow">Independent Writing</p>
+                <h2 id="oracle-articles-title">Notes on Oracle Products</h2>
+                <p>Personal analysis and implementation notes for people working with Oracle platforms.</p>
+            </div>
+
+            <div class="article-list">
+                {% for article in articles %}
+                <article class="article-card">
+                    <div class="article-meta">
+                        {% if article.topic %}
+                        <span>{{ article.topic }}</span>
+                        {% endif %}
+                        {% if article.date %}
+                        <time datetime="{{ article.date | date_to_xmlschema }}">{{ article.date | date: "%b %-d, %Y" }}</time>
+                        {% endif %}
+                    </div>
+                    <h3>
+                        <a href="{{ article.url | relative_url }}">{{ article.title }}</a>
+                    </h3>
+                    {% if article.description %}
+                    <p>{{ article.description }}</p>
+                    {% endif %}
+                </article>
+                {% endfor %}
+            </div>
         </section>
-    </div>
+    </main>
 </body>
 
 </html>

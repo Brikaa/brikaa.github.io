@@ -1,4 +1,11 @@
-# Using fixed credentials from Oracle VB to OIC? Think again
+---
+layout: article
+title: Using fixed credentials from Oracle VB to OIC? Think again
+description: Why fixed Visual Builder credentials can overexpose integrations in Oracle Integration Cloud.
+date: 2026-05-28
+topic: Visual Builder and OIC
+article: true
+---
 
 ## The insecure architecture
 The following architecture introduces serious security vulnerabilities:
