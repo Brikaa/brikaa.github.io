@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Fixed credentials from Oracle Visual Builder to OIC are risky
-description: Why fixed Visual Builder credentials can overexpose backends.
+description: Why fixed Visual Builder credentials (e.g., Basic Auth, OAuth Client Credentials) can overexpose backends.
 date: 2026-05-28
 topic: Oracle Visual Builder and OIC
 article: true
